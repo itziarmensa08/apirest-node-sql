@@ -11,7 +11,10 @@ const sequelize = new Sequelize(
     password,
     {
         host: host,
-        dialect: "mysql"
+        dialect: "mysql",
+        dialectOptions: {
+          createDatabase: true,
+        },
     }
 );
 
